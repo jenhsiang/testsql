@@ -1,76 +1,33 @@
-��g�T
-
+會員
 =====
-
-g�T"}_
-
-�Y
-T
-
-'`%R
-
-��q�
-
-0W@W
+會員索引
+姓名
+性別
+電話
+地址
 
 
-
-
-
-FU�T
-
+商品
 ====
+商品索引
+商品名稱
+商品描述
+商品價格
 
-FU�T"}_
-
-FU�T
-T1z
-
-FU�T�c��
-
-FU�T�P<h
-
-
-
-��U;Nh�
-
+訂單主表
 ========
-
-��U;Nh�"}_
-
-g�T"}_
-
-��UBf��
-
-��U�P;�
+訂單主表索引
+會員索引
+訂單時間
+訂單備註
 
 
-
-
-
-��Uf0}h�
-
+訂單明細表
 ==========
-
-��Uf0}h�"}_
-
-��U;Nh�"}_
-
-FU�T"}_
-
-FU�Txeϑ
-
-
-
-
-
-select
-
-insert into
-
-update
-
-delete
+訂單明細表索引
+訂單主表索引
+商品索引
+商品數量
 
 
 select a.o_index,a.m_index,a.o_time,a.o_desc,b.m_username,c.p_index,c.d_procount,
@@ -82,7 +39,12 @@ inner join order_detail c
 on a.o_index = c.o_index
 inner join product d
 on c.p_index = d.p_index
+
+
+select
+insert into
+update
+delete
+
 INSERT INTO product (p_index, p_name,p_describe,p_price )
-
 VALUES (1,'p1','p1car',100);
-
